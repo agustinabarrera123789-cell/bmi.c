@@ -1,7 +1,8 @@
 # bmi.c
 #include <stdio.h>
 
-int main() {
+int main() 
+{
     float peso, altura, bmi;
 
     printf("Ingrese el peso en kg: ");
