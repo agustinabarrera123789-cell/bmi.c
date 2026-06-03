@@ -1,7 +1,6 @@
-# bmi.c
 #include <stdio.h>
 
-int main() 
+int main(void) 
 {
     float peso, altura, bmi;
 
