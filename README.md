@@ -4,10 +4,23 @@ int main(void)
 {
     float peso, altura, bmi;
 
-    printf("Ingrese el peso en kg: ");
-    scanf("%f", &peso);
-    printf("Ingrese la altura en metros: ");
-    scanf("%f", &altura);
+    do {
+        printf("Ingrese el peso en kg: ");
+        scanf("%f", &peso);
+
+        if (peso <= 0) {
+            printf("Error: El peso debe ser un número positivo. Intente nuevamente.\n\n");
+        }
+    } while (peso <= 0);
+
+    do {
+        printf("Ingrese la altura en metros: ");
+        scanf("%f", &altura);
+
+        if (altura <= 0) {
+            printf("Error: La altura debe ser un número positivo. Intente nuevamente.\n\n");
+        }
+    } while (altura <= 0);
 
     bmi = peso / (altura * altura);
 
@@ -19,9 +32,9 @@ int main(void)
     printf(" 18.5 a 24.9  |  Normal\n");
     printf(" 25.0 a 29.9  |  Sobrepeso\n");
     printf("     >=30     |  Obesidad\n");
-    
-///Evaluación de la condición del usuario según su IMC///
 
+    ///Evaluación de la condición del usuario según su IMC///
+    
     if (bmi < 18.5) {
         printf("\nCondición actual: Bajo peso\n");
     } else if (bmi < 25.0) {
@@ -31,5 +44,6 @@ int main(void)
     } else {
         printf("\nCondición actual: Obesidad\n");
     }
+
     return 0;
 }
