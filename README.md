@@ -19,6 +19,17 @@ int main(void)
     printf(" 18.5 a 24.9  |  Normal\n");
     printf(" 25.0 a 29.9  |  Sobrepeso\n");
     printf("     >=30     |  Obesidad\n");
+    
+///Evaluación de la condición del usuario según su IMC///
 
+    if (bmi < 18.5) {
+        printf("\nCondición actual: Bajo peso\n");
+    } else if (bmi < 25.0) {
+        printf("\nCondición actual: Normal\n");
+    } else if (bmi < 30.0) {
+        printf("\nCondición actual: Sobrepeso\n");
+    } else {
+        printf("\nCondición actual: Obesidad\n");
+    }
     return 0;
 }
